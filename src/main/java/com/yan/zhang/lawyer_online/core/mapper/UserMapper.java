@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
     void addUser(@Param("user") User user);
+    void updateUser(User user);
 }
