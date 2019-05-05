@@ -1,0 +1,20 @@
+<h1>用戶信息注冊首頁</h1>
+<head>
+    <link rel="stylesheet" href="static/css/zhuce.css" type="text/css">
+</head>
+<body>
+    <form action="/UserController/insert" method="post">
+        <fieldset style="border:none">
+            <legend style="display:none">注冊表单</legend>
+            <ul>
+                <li><label for="name">姓名: </label><input type="text" id="name" /></li>
+                <li><label for="age">年齡: </label><input type="text" id="age" /></li>
+                <li><label for="sex">性別: </label><input type="text" id="sex" /></li>
+                <li><label for="mobile">手机号: </label><input type="text" id="mobile" /></li>
+                <li><label for="address">住址: </label><input type="text" id="address" /></li>
+                <li><input type="submit" value="注册" class="subBtn" /></li>
+            </ul>
+        </fieldset>
+    </form>
+
+</body>
