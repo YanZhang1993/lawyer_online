@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yan.zhang.lawyer_online.core.mapper">
+<mapper namespace="com.yan.zhang.lawyer_online.core.mapper.UserMapper">
     <insert id="addUser" parameterType="User">
         insert into user (name,age,sex,mobile,address,user_id) values
-        (#{name},#{age},#{sex},#{mobile},#{address},#{user_id})
+        (#{userName},#{age},#{sex},#{mobile},#{address},#{userId})
     </insert>
 </mapper>

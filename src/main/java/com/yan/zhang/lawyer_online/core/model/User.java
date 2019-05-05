@@ -16,6 +16,8 @@ public class User {
     private String address;
     private String mobile;
 
+    public User() {}
+
     public void setUserId(Long userId) {
         this.userId = userId;
     }

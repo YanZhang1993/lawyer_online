@@ -1,0 +1,48 @@
+<h1>用戶信息注冊首頁</h1>
+<head>
+    <script type="text/javascript" src="../script/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <form id = "registForm">
+        <fieldset style="border:none">
+            <legend style="display:none">注冊表单</legend>
+            <ul>
+                <li><label for="userName">姓名: </label><input type="text" name = "userName" id="userName" /></li>
+
+                <li><label for="age">年齡: </label><input type="text" name = "age" id="age" /></li>
+
+                <li><label for="sex">性別: </label><input type="text" name = "sex" id="sex" /></li>
+
+                <li><label for="mobile">手机号: </label><input type="text" name = "mobile" id="mobile" /></li>
+
+                <li><label for="address">住址: </label><input type="text" name = "address" id="address" /></li>
+            </ul>
+        </fieldset>
+        <div class="fee_opr">
+            <button type="button" class="fee_sure" style="border: none;background: #003260;color: #ffffff;padding: 3px 30px;margin-left: 10px;border-radius: 0px;">注册</button>
+            <button type="button" class="fee_cancel" style="border: none;background: #003260;color: #ffffff;padding: 3px 30px;margin-left: 10px;border-radius: 0px;">取消</button>
+        </div>
+
+    </form>
+
+    <script type="text/javascript">
+        $(".fee_sure").click(function(){
+            var dataObj = $("#registForm").serializeArray();
+           $.ajax({
+              url:"/insert",
+                type: "POST",
+                 dataType:"json",
+                 contentType:'application/json;charset=UTF-8',
+                 data:dataObj,
+               cache:false,
+                 ifModified:true,
+                 success:function(json){
+                         if(json.flag == 1){
+                             alert("1234");
+                         }
+                 }
+             });
+        })
+
+
+</script></body>

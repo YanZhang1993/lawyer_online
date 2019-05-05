@@ -13,7 +13,7 @@ public class UserController {
     private UserMapper userMapper;
 
     @RequestMapping("/insert")
-    public String insertUser(@RequestBody User user){
+    public String insertUser(@RequestBody(required = false) User user){
         user.setUserId(SnowflakeIdWorker.generateId());
         userMapper.addUser(user);
         return "恭喜你，注册成功！";
